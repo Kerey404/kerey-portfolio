@@ -7,28 +7,43 @@ import { projects } from "@/lib/data";
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative mx-auto max-w-5xl px-6 py-28">
-      <SectionHeading index="03" label="Projects" title="Избранные проекты" />
+    <section id="projects" className="relative mx-auto max-w-4xl px-6 py-28">
+      <SectionHeading
+        index="03"
+        label="Избранные проекты"
+        title="Favourite Projects"
+      />
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => {
           const isLarge = i === 0 || i === 3;
+          const isFull = i === 2;
 
           return (
             <motion.article
               key={project.title}
               initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: (i % 3) * 0.1, ease: "easeOut" }}
+              transition={{
+                duration: 0.6,
+                delay: (i % 3) * 0.1,
+                ease: "easeOut",
+              }}
               whileHover={{ scale: 1.02 }}
               className={`glass-card glow-border group flex flex-col justify-between p-6 transition-shadow duration-300 hover:shadow-glow-violet ${
-                isLarge ? "md:col-span-2 lg:col-span-2" : "col-span-1"
+                isFull
+                  ? "col-span-3"
+                  : isLarge
+                    ? "md:col-span-2 lg:col-span-2"
+                    : "col-span-1"
               }`}
             >
               <div>
                 <div className="flex items-start justify-between">
-                  <h3 className="font-display text-xl font-semibold text-ink">{project.title}</h3>
+                  <h3 className="font-display text-xl font-semibold text-ink">
+                    {project.title}
+                  </h3>
                   {/* Оставили только эту иконку GitHub, она минималистичная и кликабельная */}
                   {project.githubUrl && (
                     <a
@@ -42,7 +57,9 @@ export default function Projects() {
                     </a>
                   )}
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">{project.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+                  {project.description}
+                </p>
               </div>
 
               <div className="mt-6 flex flex-wrap gap-2">

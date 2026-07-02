@@ -20,10 +20,8 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20"
     >
-      {/* Signature background: layered grid + drifting violet/blue glow */}
-      <div className="pointer-events-none absolute inset-0 bg-glow-radial" />
       <div className="grid-bg pointer-events-none absolute inset-0" />
       <motion.div
         aria-hidden
@@ -44,16 +42,9 @@ export default function Hero() {
         animate="show"
         className="relative z-10 flex max-w-3xl flex-col items-center text-center"
       >
-        <motion.span
-          variants={item}
-          className="section-label mb-6 rounded-full border border-surface-border bg-surface px-4 py-1.5"
-        >
-          Hi, I&apos;m {profile.shortName}
-        </motion.span>
-
         <motion.h1
           variants={item}
-          className="font-display text-4xl font-semibold leading-[1.1] text-ink sm:text-6xl"
+          className="font-display text-6xl font-semibold leading-[1.1] text-ink sm:text-6xl"
         >
           {profile.name}
         </motion.h1>
@@ -62,19 +53,29 @@ export default function Hero() {
           variants={item}
           className="mt-4 bg-gradient-to-r from-accent-violet via-accent-blue to-accent-cyan bg-clip-text font-display text-xl font-medium text-transparent sm:text-2xl"
         >
-          {profile.role} <span className="text-ink-faint">|</span> {profile.focus}
+          {profile.role}{" "}
+          <span className="font-body font-normal text-ink-muted text-base px-4">
+            and
+          </span>{" "}
+          {profile.focus}
         </motion.p>
 
-        <motion.p variants={item} className="mt-6 max-w-xl text-balance font-body text-ink-muted">
+        <motion.p
+          variants={item}
+          className="mt-6 max-w-xl text-balance font-body text-ink-muted"
+        >
           {profile.tagline}
         </motion.p>
 
-        <motion.div variants={item} className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <motion.div
+          variants={item}
+          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+        >
           <a
             href={profile.telegram}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-violet to-accent-blue px-6 py-3 font-medium text-white shadow-glow-violet transition-transform hover:scale-105"
+            className="text-sm group flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-violet to-accent-blue px-6 py-3 font-medium text-white shadow-glow-violet transition-transform hover:scale-105"
           >
             <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             Contact Me
@@ -82,7 +83,7 @@ export default function Hero() {
           <a
             href={profile.cvUrl}
             download
-            className="flex items-center gap-2 rounded-full border border-surface-border bg-surface px-6 py-3 font-medium text-ink transition-colors hover:border-accent-violet/60 hover:text-white"
+            className="text-sm flex items-center gap-2 rounded-full border border-surface-border bg-surface px-6 py-3 font-medium text-ink transition-colors hover:border-accent-violet/60 hover:text-white"
           >
             <Download className="h-4 w-4" />
             Download CV
@@ -97,7 +98,9 @@ export default function Hero() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
+          Scroll
+        </span>
         <ArrowDown className="h-4 w-4" />
       </motion.a>
     </section>

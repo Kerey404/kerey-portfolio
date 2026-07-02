@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Bakhytzhan Kassymgali",
+  name: "Hi, I’m Kerey",
   shortName: "Kerey",
   role: "Software Engineer",
   focus: "AI/ML & Backend",
@@ -19,7 +19,15 @@ export const profile = {
 
 export const about = {
   text: "Я - AI/ML & Backend Engineer. Разрабатываю автономные ИИ-системы и высоконагруженные серверные решения, а не просто пишу код. Мой основной стек: Python, FastAPI,БД(PostgreSQL) и векторные БД (Qdrant). Сейчас я сфокусирован на интеграции LLM (RAG-архитектура, Function Calling) в реальные бизнес-процессы и создании Telegram-агентов, которые экономят время и деньги.",
-  stack: ["Python", "FastAPI", "Go", "PostgreSQL", "Qdrant", "LangChain", "Docker"],
+  stack: [
+    "Python",
+    "FastAPI",
+    "Go",
+    "PostgreSQL",
+    "Qdrant",
+    "LangChain",
+    "Docker",
+  ],
 };
 
 export type ExperienceStage = {
@@ -64,16 +72,15 @@ export const projects: Project[] = [
   {
     title: "Corporate RAG Assistant",
     description:
-      "Микросервис для интеллектуального поиска с защищенной средой выполнения.",
+      "Микросервис для интеллектуального поиска с защищенной средой выполнения, предназначенный для безопасной обработки пользовательских запросов, анализа данных и формирования релевантных результатов.",
     stack: ["FastAPI", "Qdrant", "Llama 3", "Docker"],
     githubUrl: "https://github.com/Kerey404/ragsys1.git", // TODO
   },
   {
-    title: "CS2 Betting / Quiz Backend",
+    title: "Quiz Backend",
     description:
       "Высоконагруженный бэкенд с безопасной авторизацией (JWT) и логикой обработки транзакций.",
-    stack: ["Go", "Python", "PostgreSQL"],
-
+    stack: ["Python", "PostgreSQL"],
   },
   {
     title: "AI Beauty Admin",
@@ -96,13 +103,13 @@ export const education: EducationEntry[] = [
     note: "2024 — настоящее время",
   },
   {
-    title: "Python Big Data Analytics Program",
+    title: "Big Data Analytics Program",
     place: "Samsung Innovation Campus",
-    note: "Топ-15 участников по Казахстану",
+    note: "Топ-15 участников",
   },
   {
     title: "Decentrathon",
     place: "Binance / Astana Hub",
-    note: "Сертификат за активное участие и создание проекта",
+    note: "Сертификат",
   },
 ];

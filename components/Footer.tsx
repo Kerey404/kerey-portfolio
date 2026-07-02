@@ -9,14 +9,14 @@ export default function Footer() {
     <footer id="contact" className="relative mx-auto max-w-4xl px-6 py-24">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="glass-card flex flex-col items-center gap-8 px-8 py-14 text-center"
       >
-        <p className="section-label">Let&apos;s build something</p>
+        <p className="section-label">Готов обсудить проект</p>
         <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-          Готов обсудить проект
+          Let&apos;s build something
         </h2>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
@@ -77,7 +77,7 @@ export default function Footer() {
       </motion.div>
 
       <p className="mt-10 text-center font-mono text-xs text-ink-faint">
-        © {new Date().getFullYear()} {profile.name}. Built with Next.js &amp; Framer Motion.
+        © {new Date().getFullYear()} Kerey. Built with Next.js &amp; Framer Motion.
       </p>
     </footer>
   );

@@ -8,14 +8,14 @@ import { experience } from "@/lib/data";
 export default function Experience() {
   return (
     <section id="experience" className="relative mx-auto max-w-4xl px-6 py-28">
-      <SectionHeading index="02" label="Experience" title="Опыт работы" />
+      <SectionHeading index="02" label="Опыт работы" title="Experience" />
 
       <div className="space-y-16">
         {experience.map((entry) => (
           <div key={entry.company} className="relative">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="mb-8 flex items-center gap-3"
@@ -26,7 +26,7 @@ export default function Experience() {
               <div>
                 <h3 className="font-display text-xl font-semibold text-ink">{entry.company}</h3>
                 {/* Убрали {entry.period}, оставили только роль */}
-                <p className="font-mono text-xs uppercase tracking-wide text-ink-faint">
+                <p className="font-mono text-xs mt-0.5 tracking-wide text-ink-faint">
                   {entry.role}
                 </p>
               </div>
@@ -42,7 +42,7 @@ export default function Experience() {
                 <motion.div
                   key={stage.label}
                   initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
                   className="relative"

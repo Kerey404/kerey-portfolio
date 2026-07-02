@@ -8,17 +8,23 @@ type SectionHeadingProps = {
   title: string; // big heading
 };
 
-export default function SectionHeading({ index, label, title }: SectionHeadingProps) {
+export default function SectionHeading({
+  index,
+  label,
+  title,
+}: SectionHeadingProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="mb-12 flex items-end gap-4"
+      className="relative mb-24 flex items-end gap-4"
     >
-      <span className="font-mono text-sm text-ink-faint">{index}</span>
-      <div>
+      <span className="absolute -left-32 font-mono text-lg text-ink-faint/25">
+        {index}
+      </span>
+      <div className="w-full flex flex-col items-center justify-center">
         <p className="section-label mb-2">{label}</p>
         <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
           {title}
