@@ -2,7 +2,7 @@ export const profile = {
   name: "Bakhytzhan Kassymgali",
   shortName: "Kerey",
   role: "Software Engineer",
-  focus: "AI & Backend",
+  focus: "AI/ML & Backend",
   tagline:
     "Создаю надежную бэкенд-архитектуру и внедряю интеллектуальные AI/ML решения для бизнеса.",
   email: "kereyb01@gmail.com", // TODO: confirm this is the right contact email
