@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Bakhytzhan Kasymgali",
+  name: "Bakhytzhan Kassymgali",
   shortName: "Kerey",
   role: "Software Engineer",
   focus: "AI & Backend",
@@ -11,7 +11,7 @@ export const profile = {
   cvUrl: "/cv.pdf", // TODO: drop your real CV file into /public/cv.pdf
   socials: {
     github: "https://github.com/Kerey404",
-    linkedin: "https://linkedin.com/in/your-linkedin", // TODO: add your real LinkedIn URL
+    linkedin: "https://www.linkedin.com/in/kereydev/", // TODO: add your real LinkedIn URL
     telegram: "https://t.me/kakaaa1q",
     instagram: "https://instagram.com/jnsvv1",
   },
