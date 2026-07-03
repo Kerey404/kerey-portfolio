@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className="glass-card flex w-full max-w-3xl items-center justify-between px-5 py-3">
         {/* Изменили логотип на kerey.dev */}
         <a href="#top" className="font-display text-base font-bold tracking-wide text-ink">
-          kerey<span className="text-accent-violet">.dev</span>
+          kerey<span className="text-accent-violet">.work</span>
         </a>
         
         <ul className="hidden items-center gap-6 sm:flex">

@@ -25,35 +25,43 @@ export default function Experience() {
               </div>
               <div>
                 <h3 className="font-display text-xl font-semibold text-ink">{entry.company}</h3>
-                {/* Убрали {entry.period}, оставили только роль */}
                 <p className="font-mono text-xs mt-0.5 tracking-wide text-ink-faint">
                   {entry.role}
                 </p>
               </div>
             </motion.div>
 
-            {/* Neon vertical line */}
-            <div className="relative ml-5 space-y-8 border-l border-surface-border pl-8">
-              <span
-                aria-hidden
-                className="absolute -left-px top-0 h-full w-px bg-gradient-to-b from-accent-violet via-accent-blue to-transparent shadow-glow-sm"
-              />
-              {entry.stages.map((stage, i) => (
-                <motion.div
-                  key={stage.label}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
-                  className="relative"
-                >
-                  <span className="absolute -left-[41px] top-1.5 h-3 w-3 rounded-full bg-accent-violet shadow-glow-sm" />
-                  <p className="font-mono text-xs uppercase tracking-wide text-accent-violet">
-                    {stage.label}
-                  </p>
-                  <p className="mt-2 text-ink-muted">{stage.description}</p>
-                </motion.div>
-              ))}
+            {/* Timeline: точка и линия в одной flex-колонке — всегда выровнены */}
+            <div>
+              {entry.stages.map((stage, i) => {
+                const isLast = i === entry.stages.length - 1;
+                return (
+                  <motion.div
+                    key={stage.label}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
+                    className="flex gap-4"
+                  >
+                    {/* колонка с точкой и линией */}
+                    <div className="flex w-3 flex-col items-center">
+                      <span className="h-3 w-3 shrink-0 rounded-full bg-accent-violet shadow-glow-sm" />
+                      {!isLast && (
+                        <span className="mt-1 w-px flex-1 bg-gradient-to-b from-accent-violet via-accent-blue to-transparent" />
+                      )}
+                    </div>
+
+                    {/* контент */}
+                    <div className={isLast ? "pb-0" : "pb-8"}>
+                      <p className="font-mono text-xs uppercase tracking-wide text-accent-violet">
+                        {stage.label}
+                      </p>
+                      <p className="mt-2 text-ink-muted">{stage.description}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         ))}

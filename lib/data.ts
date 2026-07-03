@@ -8,7 +8,7 @@ export const profile = {
   email: "kereyb01@gmail.com", // TODO: confirm this is the right contact email
   phone: "+7 747 708 39 83",
   telegram: "https://t.me/kakaaa1q",
-  cvUrl: "/cv.pdf", // TODO: drop your real CV file into /public/cv.pdf
+  cvUrl: "cv.pdf", // TODO: drop your real CV file into /public/cv.pdf
   socials: {
     github: "https://github.com/Kerey404",
     linkedin: "https://www.linkedin.com/in/kereydev/", // TODO: add your real LinkedIn URL
@@ -18,11 +18,10 @@ export const profile = {
 };
 
 export const about = {
-  text: "Я - AI/ML & Backend Engineer. Разрабатываю автономные ИИ-системы и высоконагруженные серверные решения, а не просто пишу код. Мой основной стек: Python, FastAPI,БД(PostgreSQL) и векторные БД (Qdrant). Сейчас я сфокусирован на интеграции LLM (RAG-архитектура, Function Calling) в реальные бизнес-процессы и создании Telegram-агентов, которые экономят время и деньги.",
+  text: "Я Kerey -Бакытжан Касымгали, backend и AI/ML engineer из Казахстана. Проектирую серверную часть на Django/FastAPI, работаю с PostgreSQL и внедряю AI-компоненты -от RAG-систем на Qdrant до автоматизации внутренних процессов. Мне интересно на стыке инфраструктуры и интеллекта: как сделать систему одновременно надёжной и «умной». Сейчас в поиске команды, где можно расти как backend/AI инженер и брать на себя больше ответственности за архитектуру.",
   stack: [
     "Python",
     "FastAPI",
-    "Go",
     "PostgreSQL",
     "Qdrant",
     "LangChain",

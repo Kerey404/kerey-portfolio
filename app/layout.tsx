@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `kerey.dev`,
+  title: `kerey.work `,
   description: profile.tagline,
 };
 

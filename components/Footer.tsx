@@ -77,7 +77,7 @@ export default function Footer() {
       </motion.div>
 
       <p className="mt-10 text-center font-mono text-xs text-ink-faint">
-        © {new Date().getFullYear()} Kerey. Built with Next.js &amp; Framer Motion.
+        © {new Date().getFullYear()} Kerey.
       </p>
     </footer>
   );
