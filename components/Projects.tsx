@@ -14,7 +14,7 @@ export default function Projects() {
         title="Favourite Projects"
       />
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => {
           const isLarge = i === 0 || i === 3;
           const isFull = i === 2;
@@ -33,7 +33,7 @@ export default function Projects() {
               whileHover={{ scale: 1.02 }}
               className={`glass-card glow-border group flex flex-col justify-between p-6 transition-shadow duration-300 hover:shadow-glow-violet ${
                 isFull
-                  ? "col-span-3"
+                  ? "md:col-span-2 lg:col-span-3"
                   : isLarge
                     ? "md:col-span-2 lg:col-span-2"
                     : "col-span-1"
